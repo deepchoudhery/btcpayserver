@@ -76,7 +76,7 @@ namespace BTCPayServer.Tests
             get; set;
         }
 
-        IWebHost _Host;
+        IHost _Host;
         public int Port
         {
             get; set;
@@ -180,40 +180,48 @@ namespace BTCPayServer.Tests
             if (LoadPluginsInDefaultAssemblyContext)
                 confBuilder.AddInMemoryCollection([new("TEST_RUNNER_ENABLED", "true")]);
             var conf = confBuilder.Build();
-            _Host = new WebHostBuilder()
-                    .UseDefaultServiceProvider(options =>
+            _Host = Host.CreateDefaultBuilder()
+                    .ConfigureWebHostDefaults(webBuilder =>
                     {
-                        options.ValidateScopes = true;
+                        webBuilder
+                            .UseDefaultServiceProvider(options =>
+                            {
+                                options.ValidateScopes = true;
+                            })
+                            .UseEnvironment(HostEnvironment)
+                            .UseConfiguration(conf)
+                            .UseContentRoot(FindBTCPayServerDirectory())
+                            .UseWebRoot(Path.Combine(FindBTCPayServerDirectory(), "wwwroot"))
+                            .ConfigureServices(s =>
+                            {
+                                s.AddLogging(l =>
+                                {
+                                    l.AddFilter("System.Net.Http.HttpClient", LogLevel.Critical);
+                                    l.SetMinimumLevel(LogLevel.Information)
+                                    .AddFilter("Microsoft", LogLevel.Error)
+                                    .AddFilter("Microsoft.EntityFrameworkCore.Migrations", LogLevel.Information)
+                                    .AddFilter("Fido2NetLib.DistributedCacheMetadataService", LogLevel.Error)
+                                    .AddProvider(LoggerProvider);
+                                });
+                            })
+                            .ConfigureServices(services =>
+                            {
+                                services.TryAddSingleton<IFeeProviderFactory>(new BTCPayServer.Services.Fees.FixedFeeProvider(new FeeRate(100L, 1)));
+                            })
+                            .UseKestrel()
+                            .UseStartup<Startup>();
                     })
-                    .UseEnvironment(HostEnvironment)
-                    .UseConfiguration(conf)
-                    .UseContentRoot(FindBTCPayServerDirectory())
-                    .UseWebRoot(Path.Combine(FindBTCPayServerDirectory(), "wwwroot"))
-                    .ConfigureServices(s =>
-                    {
-                        s.AddLogging(l =>
-                        {
-                            l.AddFilter("System.Net.Http.HttpClient", LogLevel.Critical);
-                            l.SetMinimumLevel(LogLevel.Information)
-                            .AddFilter("Microsoft", LogLevel.Error)
-                            .AddFilter("Microsoft.EntityFrameworkCore.Migrations", LogLevel.Information)
-                            .AddFilter("Fido2NetLib.DistributedCacheMetadataService", LogLevel.Error)
-                            .AddProvider(LoggerProvider);
-                        });
-                    })
-                    .ConfigureServices(services =>
-                    {
-                        services.TryAddSingleton<IFeeProviderFactory>(new BTCPayServer.Services.Fees.FixedFeeProvider(new FeeRate(100L, 1)));
-                    })
-                    .UseKestrel()
-                    .UseStartup<Startup>()
                     .Build();
             await _Host.StartWithTasksAsync();
 
-            var urls = _Host.ServerFeatures.Get<IServerAddressesFeature>().Addresses;
-            foreach (var url in urls)
+            var server = _Host.Services.GetService(typeof(Microsoft.AspNetCore.Hosting.Server.IServer)) as Microsoft.AspNetCore.Hosting.Server.IServer;
+            var urls = server?.Features.Get<IServerAddressesFeature>()?.Addresses;
+            if (urls != null)
             {
-                TestLogs.LogInformation("Listening on " + url);
+                foreach (var url in urls)
+                {
+                    TestLogs.LogInformation("Listening on " + url);
+                }
             }
             TestLogs.LogInformation("Server URI " + ServerUri);
 
