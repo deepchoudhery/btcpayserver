@@ -40,7 +40,7 @@
         "required": true,
         "description": "The invoice ID",
         "schema": {
-            "$ref": "#/components/schemas/InvoiceId"
+          "$ref": "#/components/schemas/InvoiceId"
         }
       },
       "UserIdOrEmail": {
