@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Server.Features;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -14,30 +16,35 @@ namespace BTCPayServer.Tests
 {
     public class CustomServer : IDisposable
     {
-        readonly IWebHost _Host = null;
+        readonly IHost _Host = null;
         readonly CancellationTokenSource _Closed = new CancellationTokenSource();
         readonly Channel<JObject> _Requests = Channel.CreateUnbounded<JObject>();
         public CustomServer()
         {
             var port = Utils.FreeTcpPort();
-            _Host = new WebHostBuilder()
-                .Configure(app =>
+            _Host = Host.CreateDefaultBuilder()
+                .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    app.Run(async req =>
-                    {
-                        await _Requests.Writer.WriteAsync(JsonConvert.DeserializeObject<JObject>(await new StreamReader(req.Request.Body).ReadToEndAsync()), _Closed.Token);
-                        req.Response.StatusCode = 200;
-                    });
+                    webBuilder
+                        .Configure(app =>
+                        {
+                            app.Run(async req =>
+                            {
+                                await _Requests.Writer.WriteAsync(JsonConvert.DeserializeObject<JObject>(await new StreamReader(req.Request.Body).ReadToEndAsync()), _Closed.Token);
+                                req.Response.StatusCode = 200;
+                            });
+                        })
+                        .UseKestrel()
+                        .UseUrls("http://127.0.0.1:" + port);
                 })
-                .UseKestrel()
-                .UseUrls("http://127.0.0.1:" + port)
                 .Build();
             _Host.Start();
         }
 
         public Uri GetUri()
         {
-            return new Uri(_Host.ServerFeatures.Get<IServerAddressesFeature>().Addresses.First());
+            var server = _Host.Services.GetService(typeof(Microsoft.AspNetCore.Hosting.Server.IServer)) as Microsoft.AspNetCore.Hosting.Server.IServer;
+            return new Uri(server.Features.Get<IServerAddressesFeature>().Addresses.First());
         }
 
         public async Task<JObject> GetNextRequest()

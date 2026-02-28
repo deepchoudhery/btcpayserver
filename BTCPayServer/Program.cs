@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -13,6 +12,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
 [assembly: InternalsVisibleTo("BTCPayServer.Tests")]
 
@@ -28,8 +29,9 @@ namespace BTCPayServer
             if (args.Length > 0 && args[0] == "run")
                 args = args.Skip(1).ToArray(); // Hack to make dotnet watch work
 
-            ServicePointManager.DefaultConnectionLimit = 100;
-            IWebHost host = null;
+            // ServicePointManager is obsolete in .NET 5+, connection limits are managed automatically
+            // Old code: ServicePointManager.DefaultConnectionLimit = 100;
+            IHost host = null;
             var processor = new ConsoleLoggerProcessor();
             var loggerProvider = new CustomConsoleLogProvider(processor);
             using var loggerFactory = new LoggerFactory();
@@ -47,48 +49,60 @@ namespace BTCPayServer
                 confBuilder.AddJsonFile("appsettings.dev.json", true, false);
 #endif
                 conf = confBuilder.Build();
-                var builder = new WebHostBuilder()
-                    .UseKestrel()
-                    .UseConfiguration(conf)
-                    .ConfigureLogging(l =>
+                
+                var builder = Host.CreateDefaultBuilder(args)
+                    .ConfigureWebHostDefaults(webBuilder =>
                     {
-                        l.AddFilter("Microsoft", LogLevel.Error);
-                        if (!conf.GetOrDefault<bool>("verbose", false))
+                        webBuilder
+                            .UseKestrel()
+                            .UseConfiguration(conf)
+                            .ConfigureLogging(l =>
+                            {
+                                l.AddFilter("Microsoft", LogLevel.Error);
+                                if (!conf.GetOrDefault<bool>("verbose", false))
+                                {
+                                    l.AddFilter("Events", LogLevel.Warning);
+                                    l.AddFilter("BTCPayServer.HostedServices", LogLevel.Warning);
+                                }
+
+                                // Uncomment this to see EF queries
+                                //l.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Trace);
+                                l.AddFilter("Microsoft.EntityFrameworkCore.Migrations", LogLevel.Information);
+                                l.AddFilter("BTCPayServer.Migrations", LogLevel.Information);
+                                l.AddFilter("System.Net.Http.HttpClient", LogLevel.Critical);
+                                l.AddFilter("Microsoft.AspNetCore.Antiforgery.Internal", LogLevel.Critical);
+                                l.AddFilter("Fido2NetLib.DistributedCacheMetadataService", LogLevel.Error);
+                                l.AddProvider(new CustomConsoleLogProvider(processor));
+                            })
+                            .UseStartup<Startup>();
+
+                        // When we run the app with dotnet run (typically in dev env), the wwwroot isn't in the same directory
+                        // than this assembly.
+                        // But when we use dotnet publish, the wwwroot is published alongside the assembly!
+                        // This fix https://github.com/btcpayserver/btcpayserver/issues/1894
+                        var defaultContentPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                        var defaultWebRoot = Path.Combine(defaultContentPath, "wwwroot");
+                        var defaultWebRootExists = Directory.Exists(defaultWebRoot);
+                        if (!defaultWebRootExists)
                         {
-                            l.AddFilter("Events", LogLevel.Warning);
-                            l.AddFilter("BTCPayServer.HostedServices", LogLevel.Warning);
+                            // When we use dotnet run...
+                            webBuilder.UseContentRoot(Directory.GetCurrentDirectory());
                         }
-
-                        // Uncomment this to see EF queries
-                        //l.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Trace);
-                        l.AddFilter("Microsoft.EntityFrameworkCore.Migrations", LogLevel.Information);
-                        l.AddFilter("BTCPayServer.Migrations", LogLevel.Information);
-                        l.AddFilter("System.Net.Http.HttpClient", LogLevel.Critical);
-                        l.AddFilter("Microsoft.AspNetCore.Antiforgery.Internal", LogLevel.Critical);
-                        l.AddFilter("Fido2NetLib.DistributedCacheMetadataService", LogLevel.Error);
-                        l.AddProvider(new CustomConsoleLogProvider(processor));
-                    })
-                    .UseStartup<Startup>();
-
-                // When we run the app with dotnet run (typically in dev env), the wwwroot isn't in the same directory
-                // than this assembly.
-                // But when we use dotnet publish, the wwwroot is published alongside the assembly!
-                // This fix https://github.com/btcpayserver/btcpayserver/issues/1894
-                var defaultContentPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                var defaultWebRoot = Path.Combine(defaultContentPath, "wwwroot");
-                var defaultWebRootExists = Directory.Exists(defaultWebRoot);
-                if (!defaultWebRootExists)
-                {
-                    // When we use dotnet run...
-                    builder.UseContentRoot(Directory.GetCurrentDirectory());
-                }
+                    });
+                
                 host = builder.Build();
                 await host.StartWithTasksAsync();
-                var urls = host.ServerFeatures.Get<IServerAddressesFeature>().Addresses;
-                foreach (var url in urls)
+                
+                // Get server addresses from the web server
+                var server = host.Services.GetService(typeof(Microsoft.AspNetCore.Hosting.Server.IServer)) as Microsoft.AspNetCore.Hosting.Server.IServer;
+                var urls = server?.Features.Get<IServerAddressesFeature>()?.Addresses;
+                if (urls != null)
                 {
-                    // Some tools such as dotnet watch parse this exact log to open the browser
-                    logger.LogInformation("Now listening on: " + url);
+                    foreach (var url in urls)
+                    {
+                        // Some tools such as dotnet watch parse this exact log to open the browser
+                        logger.LogInformation("Now listening on: " + url);
+                    }
                 }
                 await host.WaitForShutdownAsync();
             }

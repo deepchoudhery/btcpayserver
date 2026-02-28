@@ -1,0 +1,1826 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-02-13T07:52:46.5006485Z",
+  "analysisEndTime": "2026-02-13T07:53:07.7151488Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 8,
+      "issues": 4,
+      "incidents": 59,
+      "effort": 59
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 8,
+        "Optional": 0,
+        "Potential": 51,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 13,
+        "Project": 7,
+        "Api": 39
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "BTCPayServer.Abstractions/BTCPayServer.Abstractions.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "BTCPayServer.Abstractions",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 55,
+        "numberOfCodeFiles": 55,
+        "linesTotal": 2532,
+        "linesOfCode": 2532,
+        "totalApiScanned": 777,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "601baa73-8d9b-41ba-82c3-4afd8056054a",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer.Abstractions/BTCPayServer.Abstractions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Abstractions/BTCPayServer.Abstractions.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore 8.0.11",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore",
+              "PackageVersion": "8.0.11",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e27a78d9-c3e0-4a63-a3e7-52c607802a8c",
+          "ruleId": "Project.0002",
+          "projectPath": "BTCPayServer.Abstractions/BTCPayServer.Abstractions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Abstractions/BTCPayServer.Abstractions.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 40,
+      "properties": {
+        "appName": "BTCPayServer.Client",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.1"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 151,
+        "numberOfCodeFiles": 151,
+        "linesTotal": 5631,
+        "linesOfCode": 5631,
+        "totalApiScanned": 5784,
+        "minLinesOfCodeToChange": 39,
+        "maxLinesOfCodeToChange": 39
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "b31f9f18-8e6d-4032-bfe5-c514e644dc07",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f9c28842-18e5-4b8f-b0a8-5503bb736136",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Uri.EscapeDataString(customerSelector)",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Subscriptions.cs",
+            "snippet": "Uri.EscapeDataString(customerSelector)",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 45,
+            "column": 112
+          }
+        },
+        {
+          "incidentId": "9709cdda-d4b2-44ec-be42-86d2342ee4b4",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Uri.EscapeDataString(customerSelector)",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Subscriptions.cs",
+            "snippet": "Uri.EscapeDataString(customerSelector)",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 41,
+            "column": 108
+          }
+        },
+        {
+          "incidentId": "bf2208d1-c47d-4a4b-ad8b-8c58af123bc1",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return await SendHttpRequest\u003CPlanCheckoutModel\u003E($\u0022api/v1/plan-checkout/{checkoutId}?email={Uri.EscapeDataString(email)}\u0022, null, HttpMethod.Post, token);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Subscriptions.cs",
+            "snippet": "return await SendHttpRequest\u003CPlanCheckoutModel\u003E($\u0022api/v1/plan-checkout/{checkoutId}?email={Uri.EscapeDataString(email)}\u0022, null, HttpMethod.Post, token);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 36,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e9fb41a7-6776-45b6-9a14-67c7395cb336",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Uri.EscapeDataString(customerSelector)",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Subscriptions.cs",
+            "snippet": "Uri.EscapeDataString(customerSelector)",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 31,
+            "column": 108
+          }
+        },
+        {
+          "incidentId": "1755e370-83b9-446c-a7ea-56b97f14850b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Uri.EscapeDataString(customerSelector)",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Subscriptions.cs",
+            "snippet": "Uri.EscapeDataString(customerSelector)",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 108
+          }
+        },
+        {
+          "incidentId": "0d3a5f48-c8a6-466e-8a25-30e27fe19748",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                               Uri.EscapeDataString(keyValuePair.Value.ToString()) \u002B \u0022\u0026\u0022;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                               Uri.EscapeDataString(keyValuePair.Value.ToString()) \u002B \u0022\u0026\u0022;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 185,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "3b87c692-a0d2-445b-b785-12324dd5a30b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                               Uri.EscapeDataString(keyValuePair.Value.ToString()) \u002B \u0022\u0026\u0022;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                               Uri.EscapeDataString(keyValuePair.Value.ToString()) \u002B \u0022\u0026\u0022;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 185,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "d07a760f-e2e2-4649-bd38-2bd585c708b1",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                                   Uri.EscapeDataString(item.ToString()) \u002B \u0022\u0026\u0022;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                                   Uri.EscapeDataString(item.ToString()) \u002B \u0022\u0026\u0022;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 179,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "45aa16a8-68fb-497b-a97d-693e304c2d68",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                                   Uri.EscapeDataString(item.ToString()) \u002B \u0022\u0026\u0022;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "uriBuilder.Query = uriBuilder.Query \u002B Uri.EscapeDataString(keyValuePair.Key) \u002B \u0022=\u0022 \u002B\n                                   Uri.EscapeDataString(item.ToString()) \u002B \u0022\u0026\u0022;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 179,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "bd7c8405-8c0e-411a-b3fb-b4d92c340122",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "req.Content = multipartContent;",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "req.Content = multipartContent;",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 163,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "7372a3d1-3942-4298-ad7a-9b79cf2c8ee4",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "request.Content = new StringContent(JsonConvert.SerializeObject(bodyPayload), Encoding.UTF8, \u0022application/json\u0022);",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "request.Content = new StringContent(JsonConvert.SerializeObject(bodyPayload), Encoding.UTF8, \u0022application/json\u0022);",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 149,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "3102d7a3-4081-46e5-b4cb-e3023b15b280",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var httpRequest = new HttpRequestMessage(method ?? HttpMethod.Get, uriBuilder.Uri);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "var httpRequest = new HttpRequestMessage(method ?? HttpMethod.Get, uriBuilder.Uri);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 131,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d94c8bcc-a23a-4e23-a664-54b2f24f2ac7",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var uriBuilder = new UriBuilder(_btcpayHost);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "var uriBuilder = new UriBuilder(_btcpayHost);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 124,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "843975c8-0937-461d-9c48-74a87144bba2",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var str = await message.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "var str = await message.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 76,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "88fee7a9-ef8e-493a-8a92-c0ce6623fda2",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldAPIError\u003E(await message.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldAPIError\u003E(await message.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 65,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "1e8f0eb6-c264-4d00-b8fb-afa649d4f96f",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldPermissionAPIError\u003E(await message.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldPermissionAPIError\u003E(await message.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 60,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "c8c008ad-7a88-459d-9e46-74c3b63d6b07",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var aa = await message.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "var aa = await message.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 54,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "9897c7b0-051f-4d2e-a8b8-c43cdaf7002f",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "if (!message.IsSuccessStatusCode \u0026\u0026 message.Content?.Headers?.ContentType?.MediaType?.StartsWith(\u0022application/json\u0022, StringComparison.OrdinalIgnoreCase) is true)\n        {\n            if (message.StatusCode == System.Net.HttpStatusCode.UnprocessableEntity)\n            {\n                var aa = await message.Content.ReadAsStringAsync();\n                var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldValidationError[]\u003E(aa);\n                throw new GreenfieldValidationException(err);\n            }\n            if (message.StatusCode == System.Net.HttpStatusCode.Forbidden)\n            {\n                var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldPermissionAPIError\u003E(await message.Content.ReadAsStringAsync());\n                throw new GreenfieldAPIException((int)message.StatusCode, err);\n            }\n            else\n            {\n                var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldAPIError\u003E(await message.Content.ReadAsStringAsync());\n                if (err.Code != null)\n                    throw new GreenfieldAPIException((int)message.StatusCode, err);\n            }\n        }",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "if (!message.IsSuccessStatusCode \u0026\u0026 message.Content?.Headers?.ContentType?.MediaType?.StartsWith(\u0022application/json\u0022, StringComparison.OrdinalIgnoreCase) is true)\n        {\n            if (message.StatusCode == System.Net.HttpStatusCode.UnprocessableEntity)\n            {\n                var aa = await message.Content.ReadAsStringAsync();\n                var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldValidationError[]\u003E(aa);\n                throw new GreenfieldValidationException(err);\n            }\n            if (message.StatusCode == System.Net.HttpStatusCode.Forbidden)\n            {\n                var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldPermissionAPIError\u003E(await message.Content.ReadAsStringAsync());\n                throw new GreenfieldAPIException((int)message.StatusCode, err);\n            }\n            else\n            {\n                var err = JsonConvert.DeserializeObject\u003CModels.GreenfieldAPIError\u003E(await message.Content.ReadAsStringAsync());\n                if (err.Code != null)\n                    throw new GreenfieldAPIException((int)message.StatusCode, err);\n            }\n        }",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 50,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "ff7fca54-261f-4bf2-8e8e-fc1ffa03aa21",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BTCPayServerClient(Uri btcpayHost, string username, string password, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _username = username;\n        _password = password;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "public BTCPayServerClient(Uri btcpayHost, string username, string password, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _username = username;\n        _password = password;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 39,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "de0ac12b-5a85-4bb6-89d9-28e2f14971f7",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost = btcpayHost;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost = btcpayHost;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "320ad909-8f60-4616-a02f-8dd89d56341b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BTCPayServerClient(Uri btcpayHost, string APIKey, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "public BTCPayServerClient(Uri btcpayHost, string APIKey, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 32,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "3d8f281c-7c26-429d-9eb4-ea0ec4cfa9dc",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost = btcpayHost;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost = btcpayHost;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "3673f4e4-a339-4d1c-92c5-273b0faf724e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BTCPayServerClient(Uri btcpayHost, HttpClient httpClient = null)\n    {\n        if (btcpayHost == null) throw new ArgumentNullException(nameof(btcpayHost));\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "public BTCPayServerClient(Uri btcpayHost, HttpClient httpClient = null)\n    {\n        if (btcpayHost == null) throw new ArgumentNullException(nameof(btcpayHost));\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "a2d0a93b-48e2-4454-96cd-1795a9f04ef8",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost = btcpayHost;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost = btcpayHost;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "79caad1f-575e-45aa-a83f-b702aae64231",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "=\u003E _btcpayHost",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "=\u003E _btcpayHost",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "daa8f6d1-1646-4ac4-afb1-d2e0d6af7158",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 23
+          }
+        },
+        {
+          "incidentId": "d89c86b8-e945-4e4e-ab6c-dbf1fe6a1227",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public Uri Host",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "public Uri Host",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "d8460f64-62a1-4ed9-86f3-2734c7b03d6e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 25
+          }
+        },
+        {
+          "incidentId": "f5027cda-0b73-4b6f-9163-c90881e358ee",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public static Uri GenerateAuthorizeUri(Uri btcpayHost, string[] permissions, bool strict = true,\n        bool selectiveStores = false, (string ApplicationIdentifier, Uri Redirect) applicationDetails = default)",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Authorization.cs",
+            "snippet": "public static Uri GenerateAuthorizeUri(Uri btcpayHost, string[] permissions, bool strict = true,\n        bool selectiveStores = false, (string ApplicationIdentifier, Uri Redirect) applicationDetails = default)",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 7,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "15cdb0de-392a-4b90-aa23-e4fe2b24a09d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public static Uri GenerateAuthorizeUri(Uri btcpayHost, string[] permissions, bool strict = true,\n        bool selectiveStores = false, (string ApplicationIdentifier, Uri Redirect) applicationDetails = default)",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Authorization.cs",
+            "snippet": "public static Uri GenerateAuthorizeUri(Uri btcpayHost, string[] permissions, bool strict = true,\n        bool selectiveStores = false, (string ApplicationIdentifier, Uri Redirect) applicationDetails = default)",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 7,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "8daf313c-a477-44f4-b6b9-56a91cbc8a3d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return result.Uri;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Authorization.cs",
+            "snippet": "return result.Uri;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 26,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "f0ff6b9e-f262-49d5-ad0f-9e77bc4d9efc",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AppendPayloadToQuery(result, new KeyValuePair\u003Cstring, object\u003E(\u0022redirect\u0022, applicationDetails.Redirect));",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Authorization.cs",
+            "snippet": "AppendPayloadToQuery(result, new KeyValuePair\u003Cstring, object\u003E(\u0022redirect\u0022, applicationDetails.Redirect));",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "06385b36-b243-4aee-b9e8-1e99dc80d625",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "if (applicationDetails.Redirect != null)\n        {\n            AppendPayloadToQuery(result, new KeyValuePair\u003Cstring, object\u003E(\u0022redirect\u0022, applicationDetails.Redirect));\n            if (!string.IsNullOrEmpty(applicationDetails.ApplicationIdentifier))\n            {\n                AppendPayloadToQuery(result, new KeyValuePair\u003Cstring, object\u003E(\u0022applicationIdentifier\u0022, applicationDetails.ApplicationIdentifier));\n            }\n        }",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.Authorization.cs",
+            "snippet": "if (applicationDetails.Redirect != null)\n        {\n            AppendPayloadToQuery(result, new KeyValuePair\u003Cstring, object\u003E(\u0022redirect\u0022, applicationDetails.Redirect));\n            if (!string.IsNullOrEmpty(applicationDetails.ApplicationIdentifier))\n            {\n                AppendPayloadToQuery(result, new KeyValuePair\u003Cstring, object\u003E(\u0022applicationIdentifier\u0022, applicationDetails.ApplicationIdentifier));\n            }\n        }",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "696a0986-f6af-43f4-b998-41268711367e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BTCPayServerClient(Uri btcpayHost, string username, string password, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _username = username;\n        _password = password;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "public BTCPayServerClient(Uri btcpayHost, string username, string password, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _username = username;\n        _password = password;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 39,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "33e5da9d-c268-43a7-9d82-61c1e165f022",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost = btcpayHost;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost = btcpayHost;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "1520c46b-4e88-48ab-950a-20528ca0ad29",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BTCPayServerClient(Uri btcpayHost, string APIKey, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "public BTCPayServerClient(Uri btcpayHost, string APIKey, HttpClient httpClient = null)\n    {\n        _apiKey = APIKey;\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 32,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "b33ba60b-6d11-41a1-8171-3baea0daaea6",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost = btcpayHost;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost = btcpayHost;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "f984eea4-20cb-4bee-b0ef-1ca0211fe06a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BTCPayServerClient(Uri btcpayHost, HttpClient httpClient = null)\n    {\n        if (btcpayHost == null) throw new ArgumentNullException(nameof(btcpayHost));\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "public BTCPayServerClient(Uri btcpayHost, HttpClient httpClient = null)\n    {\n        if (btcpayHost == null) throw new ArgumentNullException(nameof(btcpayHost));\n        _btcpayHost = btcpayHost;\n        _httpClient = httpClient ?? new HttpClient();\n    }",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "351a8af1-0e03-4202-9b6c-44d3e4b672cb",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "BTCPayServer.Client/BTCPayServer.Client.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_btcpayHost = btcpayHost;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Client/BTCPayServerClient.cs",
+            "snippet": "_btcpayHost = btcpayHost;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 8
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BTCPayServer.Common/BTCPayServer.Common.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "BTCPayServer.Common",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 14,
+        "numberOfCodeFiles": 14,
+        "linesTotal": 1425,
+        "linesOfCode": 1425,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "88614601-ad1c-4abf-a005-c1da7020223b",
+          "ruleId": "Project.0002",
+          "projectPath": "BTCPayServer.Common/BTCPayServer.Common.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Common/BTCPayServer.Common.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BTCPayServer/BTCPayServer.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 7,
+      "properties": {
+        "appName": "BTCPayServer",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1477,
+        "numberOfCodeFiles": 1100,
+        "linesTotal": 258279,
+        "linesOfCode": 115947,
+        "totalApiScanned": 23110,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "911bcc13-20d6-4c4d-a608-59e99b8225a9",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer/BTCPayServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.IO.Pipelines, 8.0.0\n\nRecommendation:\n\nRemove System.IO.Pipelines, and replace with new package System.IO.Pipelines 10.0.3",
+              "protected": "System.IO.Pipelines, 8.0.0\n\nRecommendation:\n\nRemove System.IO.Pipelines, and replace with new package System.IO.Pipelines 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer/BTCPayServer.csproj",
+            "snippet": "System.IO.Pipelines, 8.0.0\n\nRecommendation:\n\nRemove System.IO.Pipelines, and replace with new package System.IO.Pipelines 10.0.3",
+            "protectedSnippet": "System.IO.Pipelines, 8.0.0\n\nRecommendation:\n\nRemove System.IO.Pipelines, and replace with new package System.IO.Pipelines 10.0.3",
+            "label": "System.IO.Pipelines 8.0.0",
+            "properties": {
+              "PackageId": "System.IO.Pipelines",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4ca68cf6-b3e4-4841-96fc-33ccca69bd68",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer/BTCPayServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "BTCPayServer/BTCPayServer.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "c250d449-14d3-4fcf-92f5-ef8c7b2f91c2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer/BTCPayServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3",
+              "protected": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer/BTCPayServer.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3",
+            "label": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 8.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation",
+              "PackageVersion": "8.0.11",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "805b8846-6a6e-4ead-9d36-4114028172ef",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer/BTCPayServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.3",
+              "protected": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer/BTCPayServer.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.3",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.3",
+            "label": "Microsoft.AspNetCore.Mvc.NewtonsoftJson 8.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+              "PackageVersion": "8.0.11",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "15c9c599-e770-4c58-b203-1b034bf3971b",
+          "ruleId": "NuGet.0003",
+          "projectPath": "BTCPayServer/BTCPayServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Text.RegularExpressions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Text.RegularExpressions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "BTCPayServer/BTCPayServer.csproj",
+            "snippet": "System.Text.RegularExpressions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Text.RegularExpressions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Text.RegularExpressions 4.3.1",
+            "properties": {
+              "PackageId": "System.Text.RegularExpressions",
+              "PackageVersion": "4.3.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0c8dba29-e2d8-4790-b874-402728f452ba",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer/BTCPayServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson 10.0.3",
+              "protected": "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer/BTCPayServer.csproj",
+            "snippet": "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson 10.0.3",
+            "protectedSnippet": "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson 10.0.3",
+            "label": "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson 8.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson",
+              "PackageVersion": "8.0.11",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "dc3d31c0-9bdd-4a6b-bf46-baf93be54b06",
+          "ruleId": "Project.0002",
+          "projectPath": "BTCPayServer/BTCPayServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BTCPayServer/BTCPayServer.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BTCPayServer.Data/BTCPayServer.Data.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "BTCPayServer.Data",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 145,
+        "numberOfCodeFiles": 140,
+        "linesTotal": 11594,
+        "linesOfCode": 11187,
+        "totalApiScanned": 1979,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "8b6a9763-19e1-46d2-b3ae-efcda5b0d460",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer.Data/BTCPayServer.Data.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Data/BTCPayServer.Data.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Design 8.0.11",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Design",
+              "PackageVersion": "8.0.11",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "705bdffe-9416-46cf-afb8-7b70ca06b28b",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer.Data/BTCPayServer.Data.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.3",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Data/BTCPayServer.Data.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.3",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.3",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "8.0.11",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "93c0e809-0fbb-41a9-b0d7-1c41a1e2dee0",
+          "ruleId": "Project.0002",
+          "projectPath": "BTCPayServer.Data/BTCPayServer.Data.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Data/BTCPayServer.Data.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BTCPayServer.PluginPacker/BTCPayServer.PluginPacker.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "BTCPayServer.PluginPacker",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 131,
+        "linesOfCode": 131,
+        "totalApiScanned": 3,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "c287f259-99ef-4227-8b22-00bcf70a9e26",
+          "ruleId": "Project.0002",
+          "projectPath": "BTCPayServer.PluginPacker/BTCPayServer.PluginPacker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.PluginPacker/BTCPayServer.PluginPacker.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BTCPayServer.Rating/BTCPayServer.Rating.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "BTCPayServer.Rating",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 34,
+        "numberOfCodeFiles": 33,
+        "linesTotal": 5519,
+        "linesOfCode": 4201,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "df118c7b-18c0-4483-867f-bf8d4b52701f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer.Rating/BTCPayServer.Rating.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Rating/BTCPayServer.Rating.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d9063c67-d9c6-4e76-bcc6-05c759aca339",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer.Rating/BTCPayServer.Rating.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Text.Json, 8.0.5\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.3",
+              "protected": "System.Text.Json, 8.0.5\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Rating/BTCPayServer.Rating.csproj",
+            "snippet": "System.Text.Json, 8.0.5\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.3",
+            "protectedSnippet": "System.Text.Json, 8.0.5\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.3",
+            "label": "System.Text.Json 8.0.5",
+            "properties": {
+              "PackageId": "System.Text.Json",
+              "PackageVersion": "8.0.5",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5ceb8ca1-ab55-429f-9d8c-420eb5c47d8d",
+          "ruleId": "Project.0002",
+          "projectPath": "BTCPayServer.Rating/BTCPayServer.Rating.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Rating/BTCPayServer.Rating.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BTCPayServer.Tests/BTCPayServer.Tests.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "BTCPayServer.Tests",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 62,
+        "numberOfCodeFiles": 56,
+        "linesTotal": 31625,
+        "linesOfCode": 29192,
+        "totalApiScanned": 2978,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "85896388-5584-46d6-bdd4-5d6b3d22a56f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BTCPayServer.Tests/BTCPayServer.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3",
+              "protected": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Tests/BTCPayServer.Tests.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, 8.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation, and replace with new package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 10.0.3",
+            "label": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 8.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation",
+              "PackageVersion": "8.0.11",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "571266d9-dfc4-4962-816b-074ffa89c68c",
+          "ruleId": "Project.0002",
+          "projectPath": "BTCPayServer.Tests/BTCPayServer.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BTCPayServer.Tests/BTCPayServer.Tests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "isFeature": false,
+      "description": "NuGet package functionality is included with framework reference.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework reference",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    }
+  }
+}

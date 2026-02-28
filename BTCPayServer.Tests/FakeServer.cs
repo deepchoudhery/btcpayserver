@@ -15,7 +15,7 @@ namespace BTCPayServer.Tests
 {
     public class FakeServer : IDisposable
     {
-        IWebHost webHost;
+        IHost webHost;
         readonly SemaphoreSlim semaphore;
         readonly CancellationTokenSource cts = new CancellationTokenSource();
         public FakeServer()
@@ -27,20 +27,25 @@ namespace BTCPayServer.Tests
         readonly Channel<HttpContext> _channel;
         public async Task Start()
         {
-            webHost = new WebHostBuilder()
-                    .UseKestrel()
-                    .UseUrls("http://127.0.0.1:0")
-                    .Configure(appBuilder =>
+            webHost = Host.CreateDefaultBuilder()
+                    .ConfigureWebHostDefaults(webBuilder =>
                     {
-                        appBuilder.Run(async ctx =>
-                        {
-                            await _channel.Writer.WriteAsync(ctx);
-                            await semaphore.WaitAsync(cts.Token);
-                        });
+                        webBuilder
+                            .UseKestrel()
+                            .UseUrls("http://127.0.0.1:0")
+                            .Configure(appBuilder =>
+                            {
+                                appBuilder.Run(async ctx =>
+                                {
+                                    await _channel.Writer.WriteAsync(ctx);
+                                    await semaphore.WaitAsync(cts.Token);
+                                });
+                            });
                     })
                     .Build();
             await webHost.StartAsync();
-            var port = new Uri(webHost.ServerFeatures.Get<IServerAddressesFeature>().Addresses.First(), UriKind.Absolute)
+            var server = webHost.Services.GetService(typeof(Microsoft.AspNetCore.Hosting.Server.IServer)) as Microsoft.AspNetCore.Hosting.Server.IServer;
+            var port = new Uri(server.Features.Get<IServerAddressesFeature>().Addresses.First(), UriKind.Absolute)
                 .Port;
             ServerUri = new Uri($"http://127.0.0.1:{port}/");
         }
